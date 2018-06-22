@@ -4,7 +4,7 @@ using namespace std;
 class Szamla{
     int egyenleg;
     string tulaj;
-    publi:
+    public:
     Szamla(){}
     Szamla(int egyenleg, string tulaj){
         egyenleg=egyenleg;
