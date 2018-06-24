@@ -42,7 +42,7 @@ class Futodino : public Dino{
     int getLabak(){return labak;}
     void setLabak(int ujlabak){labak=ujlabak;}
     void toString(){
-       std::cout << "meret: " << getMeret() << "labak: " << getLabak() << std::endl;
+       std::cout << "meret: " << getMeret() << " labak: " << getLabak() << std::endl;
     }
 };
 
