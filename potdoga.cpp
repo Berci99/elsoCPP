@@ -59,7 +59,7 @@ class Repulodino : public Dino{
     void setSzarnyak(int ujszarnyak){szarnyak=ujszarnyak;}
     
     void toString(){
-       std::cout << "meret: " << getMeret() << "szarnyak: " << getSzarnyak() << std::endl;
+       std::cout << "meret: " << getMeret() << " szarnyak: " << getSzarnyak() << std::endl;
     }
 };
 
@@ -76,7 +76,7 @@ public:
   void setSzam(int ujszam){szam=ujszam;}
   
 void toString (){
-    std::cout << lako.getMeret()<< getSzam() << std::endl;
+    std::cout << "meret: " << lako.getMeret()<< " szam: " << getSzam() << std::endl;
     
 }
 };
@@ -99,5 +99,3 @@ int main()
 
     
 }
-
-
