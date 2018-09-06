@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int a=3
+string=! 
+float 
+
+for(int i<2; i<100; i++)
+std::cout << i << std::endl;
+
+while()
+
+
+int main()
+{
+   
+
+    return 0;
+}
