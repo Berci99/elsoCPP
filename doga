@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+class Novenyek{
+    int eletkor;
+    int ontozesisuruseg;
+    
+    
+    
+    public:
+    Novenyek(){}
+    Novenyek(int _eletkor, int_ontozesisuruseg){
+        eletkor=_eletkor;
+        ontozesisuruseg=_ontozesisuruseg;
+     
+    }
+    
+    int getEletkor(){return eletkor;}
+    int getOntozesisuruseg(){returneletkor
+    
+    
