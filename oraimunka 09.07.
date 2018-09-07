@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+
+int sum(int szam){
+    int eredmeny=0;
+    
+    for(int i=1; i<szam+1; i++){
+    
+    
+    eredmeny=eredmeny+i;
+    }
+    
+    
+    return eredmeny;
+}
+
+int sum(int kezdo, int vegso){
+    int eredmeny=0;
+    
+    
+    for(int i=kezdo; i<vegso+1; i++){
+        
+        eredmeny=eredmeny+i;
+        
+     }
+     
+     return eredmeny;
+}
+
+int faktorialis(int szam){
+   int eredmeny=1;
+    
+    for(int i=1; i<szam+1; i++){
+    
+    
+    eredmeny=eredmeny*i;
+    }
+    
+    
+    return eredmeny;
+}
+
+
+
+int main()
+{
+    
+cout<<sum(7);
+cout<<endl;
+cout<<sum(1000,10000);
+cout<<endl;
+cout<<faktorialis(4);
+cout<<endl;
+
+    return 0;
+}
