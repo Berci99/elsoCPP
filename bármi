@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+class Novenyek{
+    int eletkor;
+    int ontozesisuruseg;
+    
+    
+    
+    public:
+    Novenyek(){}
+    Novenyek(int _eletkor, int_ontozesisuruseg){
+        eletkor=_eletkor;
+        ontozesisuruseg=_ontozesisuruseg;
+     
+    }
+    
+    int getEletkor(){return eletkor;}
+    int getOntozesisuruseg(){return ontozesisuruseg;}
+    
+     void setEletkor(int ujeletkor){eletkor=ujeletkor;}
+    void setOntozesisuruseg(int ujontozesisuruseg){ontozesisuruseg=ujontozesisuruseg;}
+    
+    void toString(){
+        std::cout << getEletkor() << " éves " << getOntozesisuruseg<< "naponta" <<std::endl;
+    }
+};
+
+class Bokrok : public Novenyek{
+    int atmerojuk;
+    
+    public:
+    Bokrok(){}
+    Bokrok(int eletkor, int ontozesisuruseg, int atmerojuk):Novenyek(eletkor, ontozesisuruseg){
+        atmerojuk=_atmerojuk;
+    }
+    
+    int getAtmerojuk(){return atmerojuk;}
+    void setAtmerojuk(int ujatmerojuk){atmerojuk=ujatmerojuk;}
+    void toString(){
+       
+
+
+
+    
+}
