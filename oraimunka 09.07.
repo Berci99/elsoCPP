@@ -2,7 +2,7 @@
 using namespace std;
 
 
-int sum(int szam){
+double sum(int szam){
     int eredmeny=0;
     
     for(int i=1; i<szam+1; i++){
@@ -15,7 +15,7 @@ int sum(int szam){
     return eredmeny;
 }
 
-int sum(int kezdo, int vegso){
+double sum(int kezdo, int vegso){
     int eredmeny=0;
     
     
@@ -42,10 +42,23 @@ int faktorialis(int szam){
 }
 
 
+double  sumatlag(int kezdo, int vegso){
+    return sum(kezdo,vegso)/ ((vegso-kezdo)+1);
+}
+
+double
+sumatlag(int vegso){
+       
+       return sum(vegso)/vegso; 
+   }
+
 
 int main()
 {
-    
+cout<<sumatlag(4);
+cout<<endl;
+cout<<sumatlag(5,7);
+cout<<endl;
 cout<<sum(7);
 cout<<endl;
 cout<<sum(1000,10000);
