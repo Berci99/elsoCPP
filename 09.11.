@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+double sum(int szam){
+    int eredmeny=0;
+    
+    for(int i=1; i<szam+1; i++){
+    
+    
+    eredmeny=eredmeny+i;
+    }
+
+    return eredmeny;
+}
+
+
+
+
+
+void piramis (int meret){
+    
+    for(int i=1; i<meret+1; i++){
+    for(int j=1; j<i+1; j++){
+        cout<<j <<(j==i ? "":"+");
+    }
+    cout<<"="<< sum(i) <<endl;
+    
+    }
+    
+    
+    
+    
+}
+
+
+int main()
+{
+    piramis(6);
+
+    return 0;
+}
