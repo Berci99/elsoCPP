@@ -1,0 +1,11 @@
+kiir(int szam)
+for(int i=1; i>szam; i--)
+for(int j=i; j>szam; j--)
+
+main()
+{
+
+kiir(23)
+
+
+}
