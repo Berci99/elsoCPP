@@ -1,0 +1,35 @@
+#include <iostream>
+
+#define TOMBMERET 20
+using namespace std;
+ int tomb[10];
+void tombKiirAkonzolra(){
+for(int index=0; index<TOMBMERET; index++){
+        cout << tomb[index] << endl;
+}
+}
+
+void teddbe(int hova, int mit){
+ tomb[hova]=mit;
+}
+
+int veddki(int honnan){
+return tomb[honnan];
+}
+
+
+int main()
+{
+
+tombKiirAkonzolra();
+
+
+ for(int index=0; index<TOMBMERET; index++){
+    teddbe(index,index);
+ }
+tombKiirAkonzolra();
+cout<< veddki(4) << endl;
+
+    cout << "VEGE" << endl;
+    return 0;
+}
