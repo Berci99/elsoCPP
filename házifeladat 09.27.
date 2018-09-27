@@ -1,0 +1,31 @@
+#include <iostream>
+ #define TOMBMERET 20
+using namespace std;
+
+
+char karakter[TOMBMERET];
+
+ int tomb[TOMBMERET];
+void feltolt(){
+for(int i=0; i<TOMBMERET; i++){
+        cout << tomb[i]<< "\t";
+}
+}
+
+void paros(){
+
+for(int i=0; i< TOMBMERET; i++){
+    tomb[i]=(i+1)*2;
+}
+
+}
+ int main()
+{
+
+
+paros();
+
+feltolt();
+
+    return 0;
+}
