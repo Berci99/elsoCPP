@@ -1,0 +1,9 @@
+main{
+int tomb[10]
+ for(index=0; index<10; index++){
+   tomb[index]
+}
+
+
+return 0;
+}
