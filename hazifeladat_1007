@@ -1,0 +1,58 @@
+#include <iostream>
+
+using namespace std;
+
+
+void negativPiramis(int szam){
+    for(int i = 0; i < szam; i++){
+        for(int j = i; j < szam; j++){
+            cout << "L";
+        }
+        cout<<endl;
+    }
+}
+
+
+void masodiknegativPiramis(int szam){
+    for(int i = 0; i < szam; i++){
+        for(int j = i; j < szam; j++){
+            cout << "L";
+        }
+        cout<<endl;
+    }
+}
+
+
+void pozitivPiramis(int szam ){
+    for(int i=1; i<szam+1;i++){
+    for (int j=1; j<i+1; j++){
+
+            cout<<"L";
+        }
+        cout <<   endl;
+    }
+
+}
+void masodikpozitivPiramis(int szam ){
+    for(int i=1; i<szam+1;i++){
+    for (int j=1; j<i+1; j++){
+
+            cout<<"L";
+        }
+        cout <<   endl;
+    }
+
+}
+
+
+int main()
+{
+    negativPiramis(3);
+    cout << endl;
+    masodiknegativPiramis(5);
+    cout << endl;
+pozitivPiramis(3);
+cout << endl;
+masodikpozitivPiramis(5);
+    return 0;
+}
