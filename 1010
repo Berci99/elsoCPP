@@ -1,0 +1,106 @@
+#include <iostream>
+#define TOMBMERET 10
+
+using namespace std;
+
+int elsoszam=1;
+int masodikszam=2;
+int harmadikszam;
+int negyedikszam;
+
+int tomb[TOMBMERET];
+
+void negativpiramis(int meret){
+    for(int i = 0; i < meret; i++){
+        for(int j = i; j < meret; j++){
+            cout << "L";
+        }
+        cout << endl;
+    }
+}
+
+void pozitivpiramis(int meret){
+    for(int i = 0; i < meret; i++){
+        for(int j = 0; j <= i; j++){
+            cout << "L";
+        }
+        cout << endl;
+    }
+}
+
+void teljespiramis(int darab, int meret){
+    for(int i = 0; i < darab; i++){
+        pozitivpiramis(meret);
+        negativpiramis(meret);
+    }
+}
+
+bool duplaz(int szam){
+    szam = szam*2;
+    return true;
+}
+
+int negyzet(int szam){
+    return szam*szam;
+}
+
+int main()
+{
+    negativpiramis(3);
+    cout << endl;
+    pozitivpiramis(3);
+    cout << endl;
+    teljespiramis(2, 5);
+    cout << endl;
+
+    cout << "----||----" << endl;
+    cout << "elsoszam erteke: " << elsoszam << endl;
+    cout << "elsoszam cime: " << &elsoszam << endl;
+    cout << "masodikszam erteke: " << masodikszam << endl;
+    cout << "masodikszam cime: " << &masodikszam << endl;
+    cout << "harmadikszam erteke: " << harmadikszam << endl;
+    cout << "harmadikszam cime: " << &harmadikszam << endl;
+    cout << "negyedikszam erteke: " << negyedikszam << endl;
+    cout << "negyedikszam cime: " << &negyedikszam << endl;
+    cout << "----||----" << endl;
+
+    duplaz(elsoszam);
+
+    cout << "elsoszam erteke: " << elsoszam << endl;
+    cout << "elsoszam cime: " << &elsoszam << endl;
+    cout << "masodikszam erteke: " << masodikszam << endl;
+    cout << "masodikszam cime: " << &masodikszam << endl;
+    cout << "harmadikszam erteke: " << harmadikszam << endl;
+    cout << "harmadikszam cime: " << &harmadikszam << endl;
+    cout << "negyedikszam erteke: " << negyedikszam << endl;
+    cout << "negyedikszam cime: " << &negyedikszam << endl;
+    cout << "----||----" << endl;
+
+    harmadikszam = negyzet(elsoszam);
+
+    cout << "elsoszam erteke: " << elsoszam << endl;
+    cout << "elsoszam cime: " << &elsoszam << endl;
+    cout << "masodikszam erteke: " << masodikszam << endl;
+    cout << "masodikszam cime: " << &masodikszam << endl;
+    cout << "harmadikszam erteke: " << harmadikszam << endl;
+    cout << "harmadikszam cime: " << &harmadikszam << endl;
+    cout << "negyedikszam erteke: " << negyedikszam << endl;
+    cout << "negyedikszam cime: " << &negyedikszam << endl;
+    cout << "----||----" << endl;
+
+    for(int i = 0; i < TOMBMERET; i++){
+        cout << "tomb[" << i << "] erteke: " << tomb[i] << " cime: " << &tomb[i] << endl;
+    }
+    cout << "----||----" << endl;
+
+    for(int i = 0; i < TOMBMERET; i++){
+        tomb[i] = i;
+    }
+
+    for(int i = 0; i < TOMBMERET; i++){
+        cout << "tomb[" << i << "] erteke: " << tomb[i] << " cime: " << &tomb[i] << endl;
+    }
+    cout << "----||----" << endl;
+
+    return 0;
+}
