@@ -1,0 +1,38 @@
+#include <iostream>
+#define TOMBMERET 25
+using namespace std;
+
+char szoveg[TOMBMERET];
+
+
+
+int szamokTomb[5]{
+for(int i=0; i<5; i++){
+    tomb[i]=(i*2)+1
+}
+}
+
+char karakter();
+int szam();
+int* szamPointer;
+
+void indexekkelFeltolt();
+int szamokTombkilr[5]{
+for(int i=0; i<5; i++){
+    tomb[i]=i;
+}
+}
+
+int main()
+{
+
+int szamokTombkilr[5]{
+for(int i=0; i<5; i++){
+    tomb[i]=i;
+    cout<<"A tomb"<<i+1<<". eleme ="<<tomb[i]<<endl;
+}
+}
+
+    cout << "Hello world!" << endl;
+    return 0;
+}
