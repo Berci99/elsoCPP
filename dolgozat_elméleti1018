@@ -1,0 +1,34 @@
+#include <iostream> // bemásoljuk az iostream nevű könyvtárat. 
+#define TOMBMERET 10 // definiáltunk egy tömbméretet amire tudunk hivatkozni.
+using namespace std; // ennek a segitségével tudunk kiiratni couttal.
+
+int tomb[TOMBMERET]; // létre hoztunk egy tömböt a definiált tömbméretre hivatkozva.
+
+void elsoFuggveny(){ // létre hozunk egy függvényt melynek nincsen visszatérési értéke
+    for (int index = 0; index < TOMBMERET; ++index) { // létrehounk egy ciklust 
+        tomb[index]=index; // megadjuk a tömb értékét.
+    } 
+}
+
+void masodikFuggveny(){ // létre hozunk egy függvényt melynek nincsen visszatérési értéke
+    for (int index = 0; index < TOMBMERET; ++index) { // létrehounk egy ciklust 
+        cout<<"A tomb ["<<index<<"] eleme = "<<tomb[index]<<endl; // kiiratjuk a tomb elemeit
+    }
+}
+
+void harmadikFuggveny(){ // létre hozunk egy függvényt melynek nincsen visszatérési értéke
+    cout<<"-----||-----"<<endl; // kiir egy elválasztót.
+}
+
+int main() { 
+    masodikFuggveny(); // meghívjuk a függvényt
+    harmadikFuggveny(); // meghívjuk a függvényt
+
+    elsoFuggveny(); // meghívjuk a függvényt
+    masodikFuggveny(); // meghívjuk a függvényt
+
+    harmadikFuggveny();// meghívjuk a függvényt
+    std::cout << "Lefutottam!" << std::endl; //kiiratjuk a lefutottamot.
+
+    return 0; // visszatérésiérték.
+    }
