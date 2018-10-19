@@ -1,0 +1,94 @@
+#include <iostream>
+#define TOMBMERET 10
+using namespace std;
+
+int tomb[TOMBMERET];
+char karakterek[TOMBMERET];
+
+void fuggveny(){
+    for (int index = 0; index < TOMBMERET; ++index) {
+        tomb[index]=2*(index+1);
+    }
+}
+
+
+void paros(){
+for (int index = 0; index < TOMBMERET; ++index) {
+        tomb[index]=index;
+    }
+}
+
+
+bool betesz(int hova, int mit){
+    if(hova>=0&&hova<TOMBMERET){
+        tomb[hova]=mit;
+        return true;
+    }
+  return false;
+}
+
+bool szamotcserel(int elso, int masodik){
+if(elso<TOMBMERET&&elso>=0&&masodik<TOMBMERET&&masodik>=0){
+    int ideiglenes=tomb[elso];
+    tomb[elso]=tomb[masodik];
+    tomb[masodik]=ideiglenes;
+}
+    return false;
+}
+void kiir(){
+for (int index = 0; index < TOMBMERET; ++index) {
+        cout<<"A tomb "<<index<<". eleme = "<<tomb[index]<<endl;
+    }
+}
+
+void utolsoelembe(char karakter){
+karakterek[9]=karakter;
+}
+
+void azalmajo(){
+karakterek[0]='A';
+karakterek[1]='z';
+karakterek[2]=' ';
+karakterek[3]='a';
+karakterek[4]='l';
+karakterek[5]='m';
+karakterek[6]='a';
+karakterek[7]=' ';
+karakterek[8]='j';
+karakterek[9]='o';
+
+}
+
+bool karakterindexre(int hova, char mit){
+if(hova>=0&&hova<TOMBMERET){
+    karakterek[hova]=mit;
+    return true;
+}
+   return false;
+}
+
+void kiiras(){
+for(int index=0; index<TOMBMERET; index++){
+    cout<<index<<". karakterem = "<<karakterek[index]<<endl;
+}
+}
+
+void konzolrolfeltolt(){
+for(int i=0; i<TOMBMERET; i++){
+        cout<<"kerem adja meg a(z) "<<i+1<<". elemet"<<endl;
+    cin>>tomb[i];
+}
+
+}
+
+
+int main()
+{
+
+konzolrolfeltolt();
+kiir();
+
+
+    cout << "Lefutottam!" << endl;
+    return 0;
+}
