@@ -1,0 +1,72 @@
+#include <iostream> //bemásolja az iostream nevű könyvtárat
+
+using namespace std; // ennek a segitségével tudunk kiiratni std nélkül
+
+void szamKonzolrolNegyzetKiir(){ // létrehozunk egy függvényt melynek nincs visszatérési értéke és paramétere üres
+    int szam; // létrehozunk egy változót mely egy darab egész számot tud tárolni
+    cin >> szam; // megmondjuk, hogy a számokat a konzolról szeretnénk bekérni
+    cout << szam*szam << endl; // a szamot megszorozzuk saját magával (szám négyzete) és kiiratjuk
+} // bezárjuk a függvényt
+
+void szamKonzolrolFaktorialisKiir(){ // létrehozunk egy függvényt melynek nincs visszatérési értéke és paramétere üres
+    int szam; // létrehozunk egy változót mely egy darab egész számot tud tárolni
+    cin >> szam; // megmondjuk, hogy a számokat a konzolról szeretnénk bekérni
+    for(int i = szam-1; i > 0; i--){ //létrehozunk egy ciklust melyel mindig egyel csökkentjük az i értékét
+        szam*=i; // a szamot megszorozzuk az i-vel
+    }// bezárjuk a ciklust
+    cout << szam << endl; //kiiratjuk a számot
+} // bezárjuk a függvényt
+
+void szamokKonzolrolOsszegKiir(){// létrehozunk egy függvényt melynek nincs visszatérési értéke és paramétere üres
+    int szam;// létrehozunk egy változót mely egy darab egész számot tud tárolni
+    int szam2;// létrehozunk egy változót mely egy darab egész számot tud tárolni
+    cin >> szam;// megmondjuk, hogy a számokat a konzolról szeretnénk bekérni
+    cin >> szam2;// megmondjuk, hogy a számokat a konzolról szeretnénk bekérni
+    cout << szam+szam2 << endl; // összeadjuk és kiiratjuk a két szám összegét
+}// bezárjuk a függvényt
+
+void pozitivParatlanKiir(int x){// létrehozunk egy függvényt melynek nincs visszatérési értéke és van paramétere
+    for(int i = 0; i < x; i++){ //létrehozunk egy ciklust melyel az i a paramáterig megy
+        cout << i*2+1 << " ";// az i-t szorozzuk 2-vel majd hozzá adunk eggyet és kiiratjuk
+    }// bezárjuk a ciklust
+    cout << endl;// csinálunk egy üres sort majd sort törünk
+}// bezárjuk a függvényt
+
+void parosVagyParatlan(){// létrehozunk egy függvényt melynek nincs visszatérési értéke és paramétere üres
+    int szam;// létrehozunk egy változót mely egy darab egész számot tud tárolni
+    cin >> szam;// megmondjuk, hogy a számokat a konzolról szeretnénk bekérni
+    cout << (szam % 2 == 0 ? "paros" : "paratlan") << endl;// megvizsgélja a számot és kiirja, hogy páros ha páros és páratlant ha páratlan
+}// bezárjuk a függvényt
+
+void amigNemNulla(){// létrehozunk egy függvényt melynek nincs visszatérési értéke és paramétere üres
+    int szam;// létrehozunk egy változót mely egy darab egész számot tud tárolni
+    cin >> szam;// megmondjuk, hogy a számokat a konzolról szeretnénk bekérni
+    while(szam != 0){//adunk be számokat és addig megy amíg nem nulla a szám
+        cin >> szam;// megmondjuk, hogy a számokat a konzolról szeretnénk bekérni
+    }// bezárjuk a ciklust
+}// bezárjuk a függvényt
+
+void legnagyobbSzamAmigNemNulla(){// létrehozunk egy függvényt melynek nincs visszatérési értéke és paramétere üres
+    int szam = 0;// létrehozunk egy változót mely egy darab egész számot tud tárolni és egyenlővé tesszük nullával
+    int legnagyobb = 0;// létrehozunk egy változót mely egy darab egész számot tud tárolni és egyenlővé tesszük nullával
+    do { // megnyitjuk a függvényt
+        cin >> szam;// megmondjuk, hogy a számokat a konzolról szeretnénk bekérni
+        if(szam > legnagyobb){// vizsgáljuk, hogy a szám nagyobb-e mint a legnagyobb
+            legnagyobb = szam;// és a legynagyobbat egyenlővé tesszük a számmal igy ő lesz a legjobb
+            cout << "Legnagyobb: " << legnagyobb << endl;// kiiratjuk a legnagyobbat 
+        }// bezárjuk az ifet
+    }while(szam > 0);// addig adhatunk számot amíg nem nulla
+}// bezárjuk a függvényt
+
+int main()// főfüggvény
+{// megnyitjuk a függvényt
+    szamKonzolrolNegyzetKiir();// meghívjuk a függvényt
+    szamKonzolrolFaktorialisKiir();// meghívjuk a függvényt
+    szamokKonzolrolOsszegKiir();// meghívjuk a függvényt
+    pozitivParatlanKiir(5);// meghívjuk a függvényt
+    parosVagyParatlan();// meghívjuk a függvényt
+    amigNemNulla();// meghívjuk a függvényt
+    legnagyobbSzamAmigNemNulla();// meghívjuk a függvényt
+
+    return 0;
+}
