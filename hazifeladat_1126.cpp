@@ -56,13 +56,54 @@ void deleteAllElements(){
     }
     sortores();
 }
+
+int atlag(){
+    int osszegszam=0;
+     for(int i=0; i<elementNum; i++){
+        osszegszam+=list[i].getOsszeg();
+        }
+        return osszegszam/elementNum;
+     }
+
+int max(){
+    if(elementNum>0){
+       int max=list[0].getOsszeg();
+       for(int i=0;i<elementNum;i++){
+        if(list[i].getOsszeg()>max){
+            max=list[i].getOsszeg();
+        }
+       }
+       return max;
+    }
+    else{return 0;}
+}
+
+int min(){
+   if(elementNum>0){
+      int min=list[0].getOsszeg();
+    for(int i=0;i<elementNum;i++){
+        if(list[i].getOsszeg()<min){
+            min=list[i].getOsszeg();
+        }
+       }
+       return min;
+    }
+    else{return 0;}
+}
+
+
+
  int main() {
     int menu = 0;
     do{
         cout << "\t Bankkartya hozaadasa: 1" << endl;
         cout << "\t Bankkartya megtekintese: 2" << endl;
+        cout<<"\t Bankkartya osszeg  atlag: 3"<<endl;
+        cout<<"\t Legnagyobb osszeg: 4"<<endl;
+        cout<<"\t Legkissebb osszeg: 5"<<endl;
         cout << "\t Kilepes: 0" << endl;
         cin >> menu;
+        
          if(menu == 1){
             string tempdatum;
             string temphely;
@@ -77,8 +118,24 @@ void deleteAllElements(){
         } else if(menu == 2){
             printListElementsToConsole();
         }
+        
+         else if(menu == 3){
+            cout<<"Atlag:"<<atlag()<<"Ft"<<endl;
+        }
+
+        else if(menu == 4){
+            cout<<"Legnagyobb:"<<max()<<"Ft"<<endl;
+        }
+
+        else if(menu == 5){
+            cout<<"Legkissebb:"<<min()<<"Ft"<<endl;
+        }
+
+        
+        
     }while(menu > 0);
      cout << "Bankkartya:" << endl;
     printListElementsToConsole();
-     cout << "Lefutottam" << endl;
+     cout << "Kilepve" << endl;
     return 0;
+ }
