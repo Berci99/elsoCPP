@@ -1,4 +1,4 @@
-#include <iostream> //könyvtálakat bemásoljuk
+#include <iostream> //könyvtárakat bemásoljuk
 #include <string>
 #include <fstream>
 #include <vector>
